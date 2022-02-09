@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Vaga } from '../models/Vagas.models';
 import { VagasService } from '../vagas.service';
 
 @Component({
@@ -13,6 +14,19 @@ export class MuralVagasComponent implements OnInit {
   constructor(private _vagaService: VagasService) { }
 
   ngOnInit(): void {
+    this.listarVagas();
   }
 
+  listarVagas() {
+    this._vagaService.getVagas()
+      .subscribe(
+        retornaVaga =>  {
+          this.vagas = retornaVaga.map(
+            item => {
+              return new Vaga();
+            }
+          )
+        }
+      )
+  }
 }

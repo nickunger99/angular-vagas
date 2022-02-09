@@ -1,16 +1,14 @@
-<div class="btn-toolbar" role="toolbar" aria-label="Toolbar com grupos de botões">
-    <div class="btn-group mr-2" role="group" aria-label="Primeiro grupo">
-      <button type="button" class="btn btn-secondary">1</button>
-      <button type="button" class="btn btn-secondary">2</button>
-      <button type="button" class="btn btn-secondary">3</button>
-      <button type="button" class="btn btn-secondary">4</button>
-    </div>
-    <div class="btn-group mr-2" role="group" aria-label="Segundo grupo">
-      <button type="button" class="btn btn-secondary">5</button>
-      <button type="button" class="btn btn-secondary">6</button>
-      <button type="button" class="btn btn-secondary">7</button>
-    </div>
-    <div class="btn-group" role="group" aria-label="Terceiro grupo">
-      <button type="button" class="btn btn-secondary">8</button>
-    </div>
+<div *ngFor="let vaga of vagas">
+
+  
+<div class="card" style="width: 18rem;">
+  <img src="assets\img\vagas\{{vaga.foto}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Código da vaga: {{vaga.id}}</h5>
+    <h5 class="card-title">Vaga: {{vaga.nome}}</h5>
+    <p class="card-text"> Descrição da vaga:  {{vaga.descricao}} </p>
+    <p class="card-text"> Salário:  R$ {{vaga.salario}},00 </p>
   </div>
+</div>
+
+</div>

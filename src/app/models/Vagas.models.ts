@@ -1,4 +1,4 @@
-class Vaga {
+export class Vaga {
     "id": number;
     "nome": string;
     "foto": string;
