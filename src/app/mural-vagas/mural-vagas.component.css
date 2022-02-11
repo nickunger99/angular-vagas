@@ -22,3 +22,7 @@
 .card:hover{
     scale: 1.03;
 }
+
+section{
+    min-height: 440px;
+}
